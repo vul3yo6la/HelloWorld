@@ -1,0 +1,10 @@
+D:\ForFun\SnackIt\SnackIt\bin\Debug\SnackIt.exe.config
+D:\ForFun\SnackIt\SnackIt\bin\Debug\SnackIt.exe
+D:\ForFun\SnackIt\SnackIt\bin\Debug\SnackIt.pdb
+D:\ForFun\SnackIt\SnackIt\obj\Debug\SnackIt.csprojAssemblyReference.cache
+D:\ForFun\SnackIt\SnackIt\obj\Debug\SnackIt.Form1.resources
+D:\ForFun\SnackIt\SnackIt\obj\Debug\SnackIt.Properties.Resources.resources
+D:\ForFun\SnackIt\SnackIt\obj\Debug\SnackIt.csproj.GenerateResource.cache
+D:\ForFun\SnackIt\SnackIt\obj\Debug\SnackIt.csproj.CoreCompileInputs.cache
+D:\ForFun\SnackIt\SnackIt\obj\Debug\SnackIt.exe
+D:\ForFun\SnackIt\SnackIt\obj\Debug\SnackIt.pdb
