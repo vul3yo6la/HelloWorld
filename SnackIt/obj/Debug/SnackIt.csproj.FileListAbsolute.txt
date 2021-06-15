@@ -8,3 +8,13 @@ D:\ForFun\SnackIt\SnackIt\obj\Debug\SnackIt.csproj.GenerateResource.cache
 D:\ForFun\SnackIt\SnackIt\obj\Debug\SnackIt.csproj.CoreCompileInputs.cache
 D:\ForFun\SnackIt\SnackIt\obj\Debug\SnackIt.exe
 D:\ForFun\SnackIt\SnackIt\obj\Debug\SnackIt.pdb
+D:\SnackIt\SnackIt\bin\Debug\SnackIt.exe.config
+D:\SnackIt\SnackIt\bin\Debug\SnackIt.exe
+D:\SnackIt\SnackIt\bin\Debug\SnackIt.pdb
+D:\SnackIt\SnackIt\obj\Debug\SnackIt.csprojAssemblyReference.cache
+D:\SnackIt\SnackIt\obj\Debug\SnackIt.Form1.resources
+D:\SnackIt\SnackIt\obj\Debug\SnackIt.Properties.Resources.resources
+D:\SnackIt\SnackIt\obj\Debug\SnackIt.csproj.GenerateResource.cache
+D:\SnackIt\SnackIt\obj\Debug\SnackIt.csproj.CoreCompileInputs.cache
+D:\SnackIt\SnackIt\obj\Debug\SnackIt.exe
+D:\SnackIt\SnackIt\obj\Debug\SnackIt.pdb
