@@ -33,6 +33,7 @@ namespace SnackIt
         public Form1()
         {
             InitializeComponent();
+            int A;
             _SnackX = (int)Math.Ceiling((decimal)(panelMap.Width / 2) / 10) * 10;
             _SnackY = (int)Math.Ceiling((decimal)(panelMap.Height / 2) / 10) * 10;
 
