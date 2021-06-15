@@ -34,6 +34,7 @@ namespace SnackIt
         {
             InitializeComponent();
             int A;
+            int B;
             _SnackX = (int)Math.Ceiling((decimal)(panelMap.Width / 2) / 10) * 10;
             _SnackY = (int)Math.Ceiling((decimal)(panelMap.Height / 2) / 10) * 10;
 
