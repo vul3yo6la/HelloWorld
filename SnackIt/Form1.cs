@@ -42,7 +42,7 @@ namespace SnackIt
         {
             BtnStart.Visible = false;
             panelMap.Visible = true;
-
+            int test = 0;
             SnackM = new Thread(SnackMove);
             GameInit();
 
