@@ -13,6 +13,7 @@ namespace SnackIt
 {
     public partial class Form1 : Form
     {
+
         public enum Direction : int
         {
             UP = 1,
@@ -21,23 +22,31 @@ namespace SnackIt
             LEFT
         }
 
+
         private delegate void InvokeUpdateState();
         private delegate void InvokeFoodChange();
 
-        public int _SnackX = 0;
-        public int _SnackY = 0;
+        public int _SnackX = 10;
+        public int _SnackY = 10;
+        public int _FoodX = 0;
+        public int _FoodY = 0;
+        public int _SnackLong = 2;
+        List<int> bodyX = new List<int>();
+        List<int> bodyY = new List<int>();
         public Random _r;
         public int _dir = (int)Direction.RIGHT;
         public int _ScoreCount = 1;
         Thread SnackM;
+
+        Color[,] bgColors = new Color[20, 20];
+
         public Form1()
         {
             InitializeComponent();
-            int A;
-            int B;
-            int C;
-            _SnackX = (int)Math.Ceiling((decimal)(panelMap.Width / 2) / 10) * 10;
-            _SnackY = (int)Math.Ceiling((decimal)(panelMap.Height / 2) / 10) * 10;
+            
+            for (int i = 0; i < 20; i++)
+                for (int j = 0; j < 20; j++)
+                    bgColors[i, j] = SystemColors.Control;
 
         }
 
@@ -45,7 +54,7 @@ namespace SnackIt
         {
             BtnStart.Visible = false;
             panelMap.Visible = true;
-  
+
             SnackM = new Thread(SnackMove);
             GameInit();
 
@@ -60,13 +69,17 @@ namespace SnackIt
         private void GameInit()
         {
             labPoint.Text = "0";
-            var a = (int)Math.Ceiling((decimal)panelMap.Width / 2);
-            labSnack.Location = new Point((int)Math.Ceiling((decimal)(panelMap.Width / 2) / 10) * 10, (int)Math.Ceiling((decimal)(panelMap.Height / 2) / 10) * 10);
-            labSnack.Text = "0";
+
+
+            bgColors[10, 10] = Color.Blue;
+            bodyX.Insert(0, 10);
+            bodyY.Insert(0, 10);
+
             _r = new Random();
-            labFood.Text = "0";
-            labFood.Location = new Point((int)Math.Ceiling((decimal)_r.Next(panelMap.Location.X, panelMap.Width) / 10) * 10, (int)Math.Ceiling((decimal)_r.Next(panelMap.Location.Y, panelMap.Height) / 10) * 10);
+            bgColors[_r.Next(0, 19), _r.Next(0, 19)] = Color.Red;
+            //labFood.Location = new Point((int)Math.Ceiling((decimal)_r.Next(panelMap.Location.X, panelMap.Width) / 10) * 10, (int)Math.Ceiling((decimal)_r.Next(panelMap.Location.Y, panelMap.Height) / 10) * 10);
             KeyPreview = true;
+            tableMmap.Refresh();
             SnackM.Start();
         }
 
@@ -92,55 +105,72 @@ namespace SnackIt
         }
         public void SnackMove()
         {
+
             while (true)
             {
+
                 switch (_dir)
                 {
                     case (int)Direction.UP:
-                        _SnackY -= 10;
-                        if (_SnackY <= panelMap.Location.Y)
-                            _SnackY += panelMap.Height;
+                        _SnackY--;
+                        if (_SnackY <= -1)
+                            _SnackY = 19;
                         break;
                     case (int)Direction.DOWM:
-                        _SnackY += 10;
-                        if (_SnackY >= (panelMap.Height + panelMap.Location.Y))
-                            _SnackY -= panelMap.Height;
+                        _SnackY++;
+                        if (_SnackY >= 20)
+                            _SnackY = 0;
                         break;
                     case (int)Direction.RIGHT:
-                        _SnackX += 10;
-                        if (_SnackX >= (panelMap.Width + panelMap.Location.X))
-                            _SnackX -= panelMap.Width;
+                        _SnackX++;
+                        if (_SnackX >= 20)
+                            _SnackX = 0;
                         break;
                     case (int)Direction.LEFT:
-                        _SnackX -= 10;
-                        if (_SnackX <= panelMap.Location.X)
-                            _SnackX += panelMap.Width;
+                        _SnackX--;
+                        if (_SnackX <= -1)
+                            _SnackX = 19;
                         break;
                 }
-                if (labFood.Location.X <= _SnackX && _SnackX <= labFood.Location.X + labFood.Width && labFood.Location.Y <= _SnackY && _SnackY <= labFood.Location.Y + labFood.Height)
+                if (bgColors[_SnackX, _SnackY] == Color.Red)
                 {
                     FoodChange();
+                    _SnackLong++;
+                    bgColors[_r.Next(0, 19), _r.Next(0, 19)] = Color.Red;
+
+                }
+                bodyX.Insert(0, _SnackX);
+                bodyY.Insert(0, _SnackY);
+                for (int i = 0; i < _SnackLong; i++)
+                {                  
                     
-                    
+                    if(i == _SnackLong - 1) 
+                    {
+                        bgColors[bodyX[i], bodyY[i]] = SystemColors.Control;
+                        bodyX[i] = 0;
+                        bodyY[i] = 0;
+                    }
+                    else
+                        bgColors[bodyX[i], bodyY[i]] = Color.Blue;
                 }
                 Thread.Sleep(100);
                 show();
             }
         }
 
-#region -擴充方法-
+        #region -擴充方法-
         private void show()
         {
             try
             {
-                if (this.labSnack.InvokeRequired)
+                if (this.tableMmap.InvokeRequired)
                 {
                     this.Invoke(
                       new InvokeUpdateState(this.show));
                 }
                 else
                 {  // 原先寫好動作的部分
-                    labSnack.Location = new Point(_SnackX, _SnackY);
+                    tableMmap.Refresh();
                 }
             }
             catch { }
@@ -149,19 +179,28 @@ namespace SnackIt
         {
             try
             {
-                if (this.labSnack.InvokeRequired)
+                if (this.labPoint.InvokeRequired)
                 {
                     this.Invoke(
                       new InvokeFoodChange(this.FoodChange));
                 }
                 else
                 {  // 原先寫好動作的部分
-                    labFood.Location = new Point((int)Math.Ceiling((decimal)_r.Next(panelMap.Location.X, panelMap.Width)), (int)Math.Ceiling((decimal)_r.Next(panelMap.Location.Y, panelMap.Height)));
+
                     labPoint.Text = Convert.ToString(_ScoreCount++);
                 }
             }
             catch { }
         }
-#endregion
+        #endregion
+
+        private void tableMmap_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
+        {
+            using (var b = new SolidBrush(bgColors[e.Column, e.Row]))
+            {
+                e.Graphics.FillRectangle(b, e.CellBounds);
+            }
+        }
     }
+
 }

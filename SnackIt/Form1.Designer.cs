@@ -28,23 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BtnStart = new System.Windows.Forms.Button();
             this.labScore = new System.Windows.Forms.Label();
             this.labPoint = new System.Windows.Forms.Label();
-            this.labSnack = new System.Windows.Forms.Label();
+            this.BtnStart = new System.Windows.Forms.Button();
             this.panelMap = new System.Windows.Forms.Panel();
-            this.labFood = new System.Windows.Forms.Label();
+            this.tableMmap = new System.Windows.Forms.TableLayoutPanel();
+            this.panelMap.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // BtnStart
-            // 
-            this.BtnStart.Location = new System.Drawing.Point(57, 659);
-            this.BtnStart.Name = "BtnStart";
-            this.BtnStart.Size = new System.Drawing.Size(115, 65);
-            this.BtnStart.TabIndex = 0;
-            this.BtnStart.Text = "開始";
-            this.BtnStart.UseVisualStyleBackColor = true;
-            this.BtnStart.Click += new System.EventHandler(this.BtnStart_Click);
             // 
             // labScore
             // 
@@ -66,41 +56,84 @@
             this.labPoint.TabIndex = 1;
             this.labPoint.Text = "0";
             // 
-            // labSnack
+            // BtnStart
             // 
-            this.labSnack.AutoSize = true;
-            this.labSnack.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labSnack.Location = new System.Drawing.Point(96, 328);
-            this.labSnack.Name = "labSnack";
-            this.labSnack.Size = new System.Drawing.Size(0, 12);
-            this.labSnack.TabIndex = 0;
+            this.BtnStart.Location = new System.Drawing.Point(56, 659);
+            this.BtnStart.Name = "BtnStart";
+            this.BtnStart.Size = new System.Drawing.Size(115, 65);
+            this.BtnStart.TabIndex = 0;
+            this.BtnStart.Text = "開始";
+            this.BtnStart.UseVisualStyleBackColor = true;
+            this.BtnStart.Click += new System.EventHandler(this.BtnStart_Click);
             // 
             // panelMap
             // 
+            this.panelMap.Controls.Add(this.tableMmap);
             this.panelMap.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panelMap.Location = new System.Drawing.Point(270, 17);
             this.panelMap.Name = "panelMap";
-            this.panelMap.Size = new System.Drawing.Size(798, 710);
+            this.panelMap.Size = new System.Drawing.Size(799, 802);
             this.panelMap.TabIndex = 1;
             this.panelMap.Visible = false;
             // 
-            // labFood
+            // tableMmap
             // 
-            this.labFood.AutoSize = true;
-            this.labFood.BackColor = System.Drawing.Color.Red;
-            this.labFood.ForeColor = System.Drawing.Color.Red;
-            this.labFood.Location = new System.Drawing.Point(123, 363);
-            this.labFood.Name = "labFood";
-            this.labFood.Size = new System.Drawing.Size(0, 12);
-            this.labFood.TabIndex = 2;
+            this.tableMmap.BackColor = System.Drawing.SystemColors.Control;
+            this.tableMmap.ColumnCount = 20;
+            this.tableMmap.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableMmap.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.tableMmap.Location = new System.Drawing.Point(0, 0);
+            this.tableMmap.Name = "tableMmap";
+            this.tableMmap.RowCount = 20;
+            this.tableMmap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableMmap.Size = new System.Drawing.Size(799, 802);
+            this.tableMmap.TabIndex = 0;
+            this.tableMmap.CellPaint += new System.Windows.Forms.TableLayoutCellPaintEventHandler(this.tableMmap_CellPaint);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1077, 736);
-            this.Controls.Add(this.labFood);
-            this.Controls.Add(this.labSnack);
+            this.ClientSize = new System.Drawing.Size(1073, 821);
             this.Controls.Add(this.BtnStart);
             this.Controls.Add(this.labPoint);
             this.Controls.Add(this.labScore);
@@ -108,19 +141,18 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            this.panelMap.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button BtnStart;
         private System.Windows.Forms.Label labScore;
         private System.Windows.Forms.Label labPoint;
-        private System.Windows.Forms.Label labSnack;
+        private System.Windows.Forms.Button BtnStart;
         private System.Windows.Forms.Panel panelMap;
-        private System.Windows.Forms.Label labFood;
+        private System.Windows.Forms.TableLayoutPanel tableMmap;
     }
 }
 
