@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnackIt", "SnackIt\SnackIt.csproj", "{59820168-175D-444D-B8A1-5BBDDCAA3B3C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatchYou", "WatchYou\WatchYou.csproj", "{F8A8288E-EEAF-4E7B-BE3A-6ADC676A05C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{59820168-175D-444D-B8A1-5BBDDCAA3B3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59820168-175D-444D-B8A1-5BBDDCAA3B3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59820168-175D-444D-B8A1-5BBDDCAA3B3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8A8288E-EEAF-4E7B-BE3A-6ADC676A05C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8A8288E-EEAF-4E7B-BE3A-6ADC676A05C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8A8288E-EEAF-4E7B-BE3A-6ADC676A05C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8A8288E-EEAF-4E7B-BE3A-6ADC676A05C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
