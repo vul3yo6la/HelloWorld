@@ -1,0 +1,9 @@
+D:\ForFun\SnackIt\WatchYou\bin\Debug\WatchYou.exe.config
+D:\ForFun\SnackIt\WatchYou\bin\Debug\WatchYou.exe
+D:\ForFun\SnackIt\WatchYou\bin\Debug\WatchYou.pdb
+D:\ForFun\SnackIt\WatchYou\obj\Debug\WatchYou.csprojAssemblyReference.cache
+D:\ForFun\SnackIt\WatchYou\obj\Debug\WatchYou.Properties.Resources.resources
+D:\ForFun\SnackIt\WatchYou\obj\Debug\WatchYou.csproj.GenerateResource.cache
+D:\ForFun\SnackIt\WatchYou\obj\Debug\WatchYou.csproj.CoreCompileInputs.cache
+D:\ForFun\SnackIt\WatchYou\obj\Debug\WatchYou.exe
+D:\ForFun\SnackIt\WatchYou\obj\Debug\WatchYou.pdb

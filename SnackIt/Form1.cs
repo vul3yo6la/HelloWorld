@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Diagnostics;
 
 namespace SnackIt
 {
@@ -39,14 +40,28 @@ namespace SnackIt
         Thread SnackM;
 
         Color[,] bgColors = new Color[20, 20];
-
+        struct S1
+        {
+            int A;
+            double B;
+            char c;
+        };
+        struct S2
+        {
+            int A;
+            double B;
+            char c;
+        };
         public Form1()
         {
             InitializeComponent();
-            
+
+            var a = sizeof(char);
             for (int i = 0; i < 20; i++)
                 for (int j = 0; j < 20; j++)
                     bgColors[i, j] = SystemColors.Control;
+
+
 
         }
 
