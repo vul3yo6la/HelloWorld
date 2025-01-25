@@ -37,7 +37,7 @@ namespace SnackIt
         public Random _r;
         public int _dir = (int)Direction.RIGHT;
         public int _ScoreCount = 1;
-        public int test_branch = 8;
+        public int test_branch = 7;
         Thread SnackM;
 
         Color[,] bgColors = new Color[20, 20];
